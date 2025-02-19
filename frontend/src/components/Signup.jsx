@@ -38,7 +38,7 @@ const Signup = ({ onClose }) => {
     if (!validate()) return;
 
     try {
-      const response = await axios.post("process.env.VITE_API_BASE_URL/user/register", {
+      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/user/register`, {
         username: formData.username, 
         email: formData.email,
         password: formData.password,

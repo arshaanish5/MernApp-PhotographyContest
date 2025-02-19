@@ -26,7 +26,7 @@ const Login = ({ onLoginSuccess, onClose }) => {
     e.preventDefault();
     if (validate()) {
         try {
-            const response = await axios.post("process.env.VITE_API_BASE_URL/user/login", formData);
+          const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/user/login`, formData);
 
             if (response.data.token) {
                 const token = response.data.token;
