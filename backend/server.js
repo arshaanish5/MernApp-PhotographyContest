@@ -41,6 +41,9 @@ app._router.stack.forEach((r) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("Photography Contest Backend is Running");
+});
 
 
 const PORT = process.env.PORT || 3000;
